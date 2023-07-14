@@ -17,12 +17,26 @@
         justify-content: space-around;
         list-style: none;
         margin-top: 50px;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
         
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
             max-width: 380px;
             width: 100%;
+
+            @media (max-width: 769px) {
+                max-width: none;
+                width: 100%;
+            }
 
             &:nth-child(2) {
                 background-image: url(../images/fundo_combo_plus.png);
