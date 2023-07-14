@@ -3,6 +3,9 @@
 @use 'shows';
 @use 'plans';
 @use 'available-devices';
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 * {
     margin: 0;
@@ -69,16 +72,43 @@ body {
 }
 
 .buttons {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$corDoTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corDoFundoBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDoFundoBotaoPrimario;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten(variaveis.$corDoFundoBotaoPrimario, 3%);
+    }
+
+    &--primary {
+        background-color: variaveis.$corDoFundoBotaoSecundario;
+        border-color: variaveis.$corDoFundoBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDoFundoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDoFundoBotaoDark, .8);
+        border-color: variaveis.$corDoTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corDoTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 .image-text-section {
