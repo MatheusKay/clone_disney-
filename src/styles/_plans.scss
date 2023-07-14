@@ -11,33 +11,27 @@
         display: flex;
         justify-content: space-around;
         list-style: none;
+        margin-top: 50px;
         
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
+            max-width: 380px;
+            width: 100%;
+
+            &:nth-child(2) {
+                background-image: url(../images/fundo_combo_plus.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }         //Atraves desse pesudo seletor podemos selecionar um item especifico de algum elemento usando ele.
 
             img {
-                width: 100%;
+                height: 83px;
             }
 
             strong {
                 display: block;
-            }
-
-            button {
-                width: 100%;
-                height: 60px;
-                font-size: 18px;
-                color: variaveis.$corDoTextoSecundario;
-                background-color: #6421ff;
-                text-transform: uppercase;
-                border-radius: 4px;
-                margin-top: 2vw;
-                margin-bottom: 8px;
-                cursor: pointer;
-            }
-
-            &--is-active {
+                margin-top: 24px;
             }
         }
     }
